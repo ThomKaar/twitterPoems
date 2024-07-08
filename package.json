@@ -1,0 +1,25 @@
+{
+  "name": "redditapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetchPost.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "got": "^14.2.1",
+    "mongodb": "^6.7.0",
+    "node-fetch": "^3.3.2",
+    "oauth-1.0a": "^2.2.6",
+    "openai": "^4.52.3",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.5",
+    "typescript": "^5.4.5"
+  }
+}
