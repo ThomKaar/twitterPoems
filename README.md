@@ -1,7 +1,7 @@
 
 ### To run
 
-Prerequesites
+prerequisites
 - node
 - typescript
 - chatgpt account
