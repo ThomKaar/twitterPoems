@@ -16,6 +16,7 @@
     "node-fetch": "^3.3.2",
     "oauth-1.0a": "^2.2.6",
     "openai": "^4.52.3",
+    "puppeteer": "^22.12.1",
     "twit": "^2.2.11"
   },
   "devDependencies": {

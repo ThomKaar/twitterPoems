@@ -4,7 +4,8 @@ import crypto from 'crypto';
 import OAuth from 'oauth-1.0a';
 import qs from 'querystring';
 import reedline from 'readline';
-import { CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET } from './secrets/twitterSecrets.js';
+import { CONSUMER_KEY, CONSUMER_SECRET } from './secrets/twitterSecrets.js';
+import { generateOauthToken } from './automateOauth';
 
 
 const readline = reedline.createInterface({
@@ -131,8 +132,7 @@ export const postTweet = async (textContent) => {
     const oAuthRequestToken = await requestToken();
     // Get authorization
     authorizeURL.searchParams.append('oauth_token', oAuthRequestToken.oauth_token);
-    console.log('Please go here and authorize:', authorizeURL.href);
-    const pin = await input('Paste the PIN here: ');
+    const pin = await generateOauthToken(authorizeURL.href);
     // Get the access token
     const oAuthAccessToken = await accessToken(oAuthRequestToken, pin.trim());
     // Make the request

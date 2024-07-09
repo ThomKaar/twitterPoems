@@ -7,8 +7,7 @@ import { postTweet } from './postTweet2.js';
     // // fetch a word from mongoDb
     const maxCount = 1;
     const baseWord: string = await fetchWord(maxCount);
-
-    console.log('baseWord: ', baseWord);
+    
     // ask chat gpt to make the poem
     const poem = await getPoem(baseWord);
     // parse the poem
