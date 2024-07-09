@@ -7,5 +7,3 @@ export const cleanPoem = (poem: string): string => {
 
     return newStr.replace('\n', ' / ');
 };
-
-console.log(cleanPoem('hello world, this is a ()()({}}}{)special poem><\n+and i dont even know "em'));

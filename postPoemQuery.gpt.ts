@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import { ORG, PROJECT, TEST_KEY } from './secrets/openai';
 
 // question template
-const templateQuery = (word) => `Make an rhyming couplet using the word ${word} with an unserious tone.`; 
+const templateQuery = (word) => `Make a rhyming couplet using the word ${word} with an unserious tone.`; 
 
 const openai = new OpenAI({
     organization: ORG,

@@ -1,19 +1,11 @@
 // fetch a single word from mongo db
 import { type WithId, Document, MongoClient, ServerApiVersion } from 'mongodb';
 import { USER_PASSWORD, USERNAME } from './secrets/mongoSecrets';
-import { WORDS } from './dataCleaning/ingestWords';
 const dbName = 'RhymingCouplets';
 const collectionName = 'coolWords';
 const uri = `mongodb+srv://${USERNAME}:${USER_PASSWORD}@words.amxz6ms.mongodb.net/?retryWrites=true&w=majority&appName=words`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
 
 // fetch an intersting word from mongo db and return it
 export const fetchWord = async (maxCount: number = 0): Promise<string> => {

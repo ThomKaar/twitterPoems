@@ -31,4 +31,4 @@ const isNotOneOf = (char: string, these: string[]): Boolean => {
     return these.every((s) => char !== s);
 };
 
-export const WORDS:CoolWordDocument[] = [...parseCSW(CSW), ...parseCNSW(CNSW)]
+export const WORDS:CoolWordDocument[] = [...parseCSW(CSW), ...parseCNSW(CNSW)];

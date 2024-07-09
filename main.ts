@@ -11,14 +11,14 @@ import { postTweet } from './postTweet2.js';
     console.log('baseWord: ', baseWord);
     // ask chat gpt to make the poem
     const poem = await getPoem(baseWord);
-    // clean the poem
+    // parse the poem
     const parsedPoem = cleanPoem(poem);
     // post the poem to twitter
-    postTweet(parsedPoem)
+    postTweet(parsedPoem);
 
-    console.log('--------------------------------------------------------post Tweet info: ');
+    console.log('--------------------------------------------------------post Tweet info:');
     console.log('baseWord: ', baseWord);
     console.log('unparsed poem: ', poem);
     console.log('parsed poem: ', parsedPoem);
-    console.log('-------------------------------------------------------------------------');
+    console.log('------------------------------------------------------------------------');
 })();
